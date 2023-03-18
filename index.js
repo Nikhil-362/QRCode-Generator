@@ -11,6 +11,7 @@ gbutton.addEventListener("click", ()=>{
     gbutton.innerText =`Generating QR Code.....`
     qrImg.src =`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${qrValue}`;
     
+    url = qrImg.src;
     qrImg.addEventListener("load", ()=>{
          imgClass.classList.add("active");
     gbutton.innerText =`Generate QR Code`
@@ -24,3 +25,16 @@ qrInput.addEventListener("keyup", ()=>{
         imgClass.classList.remove('active');
     }
 })
+
+function di() {
+    fetch(url, { method: 'GET' })
+      .then(response => response.blob())
+      .then(blob => {
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'QR-Code.jpg';
+        link.click();
+      })
+      .catch(error => console.error('Error downloading image:', error));
+  }
+
