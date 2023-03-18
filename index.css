@@ -1,0 +1,141 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* background: rgba(16, 235, 255, 0.509); */
+    font-family: 'Poppins', sans-serif;
+    /* background-image: url(./back.png) */
+
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    background: rgba(16, 235, 255, 0.509);
+    height: 100vh;
+    background-image: url(image/back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+
+
+.wrapper {
+    background-color: rgba(255, 255, 255, 0.159);
+    height: 320px;
+    margin: 200px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow:
+  5px 3.9px 2.2px rgba(0, 0, 0, 0.02),
+  11.9px 9.3px 5.3px rgba(0, 0, 0, 0.031),
+  22.4px 17.5px 10px rgba(0, 0, 0, 0.039),
+  40px 31.3px 17.9px rgba(0, 0, 0, 0.047),
+  74.8px 58.5px 33.4px rgba(0, 0, 0, 0.057),
+  179px 140px 80px rgba(0, 0, 0, 0.08)
+;
+}
+
+p,h1{
+    background-color: transparent;
+    margin: 10px;
+}
+
+
+h1{
+    font-weight: 400;
+    color: white;
+}
+
+p{
+    font-weight: 300;
+    color: white;
+}
+
+.form{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+button,input{
+    margin: 10px;
+    height: 50px;
+    width: 400px;
+    border-radius: 10px;
+    border: none;
+}
+button{
+    background-color: rgba(0, 170, 255, 0.61);
+    font-size: large;
+    color: white;
+}
+input{
+    border: 1px solid rgba(242, 242, 242, 0.463);
+    /* text-align: center; */
+    padding-left: 20px;
+    font-size: large;
+    background-color: transparent;
+    color: white;
+}
+
+::placeholder {
+    color: rgba(242, 242, 242, 0.642);
+  }
+
+
+input:focus{
+    border: none;
+    color: white;
+    outline: 1px solid rgba(242, 242, 242, 0.642);
+    padding-left: 20px;
+    font-size: large;
+}
+
+.image{
+    opacity: 0;
+    height: 230px;
+    width: 400px;
+    margin-top: 30px;
+    padding: 20px 100px;
+    outline: none;
+
+}
+
+.active{
+
+    background-color: rgba(255, 255, 255, 0.159);
+    height: 600px;
+    margin: 200px;
+    padding: 20px;
+    border-radius: 15px;
+
+}
+
+.active .image{
+    /* opacity: 100; */
+    opacity: 60%;
+
+    transition: opacity 0.5s 0.05s ease;
+}
+
+
+@media screen and (max-width: 500px) {
+    .wrapper {
+        height: 380px;
+        width: 300px;
+    }
+
+    input, button{
+        width: 250px;
+    }
+    .active{
+        height: 650px;
+    
+    }
+
+}
